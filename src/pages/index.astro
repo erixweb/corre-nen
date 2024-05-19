@@ -1,0 +1,93 @@
+---
+import "../styles/index.css";
+import Trophy from "../components/trophy.astro";
+import Rules from "../components/rules.astro";
+import Location from "../components/location.astro";
+import InfoIcon from "../components/info-icon.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Corre nen</title>
+    <link rel="preload" href="/font-atomic.woff2" as="font" crossorigin=""/>
+    <link rel="preload" href="/portada.avif" as="image" />
+  </head>
+  <body class="text-[18px]">
+    <header
+      class="relative h-[100vh] max-h-[650px] w-full flex items-center justify-center bg-zinc-900 text-white p-[32px]"
+    >
+      <img
+        src="/portada.avif"
+        alt=""
+        class="h-full w-full absolute z-[0] object-cover opacity-35"
+      />
+      <div class="w-full max-w-[700px] text-start z-[100]">
+        <h1 class="text-[70px] font-bold font-[Atomic]">corre nen</h1>
+        <p class="text-gray-300 pb-[20px] max-w-[350px]">
+          El juego perfecto para descubrir Badalona, huye de tus amigos.
+        </p>
+        <p class="text-yellow-400">🌍 Cataluña, Badalona</p>
+        <div class="w-full py-[30px] flex gap-[20px] font-semibold">
+          <a
+            href="/"
+            class="bg-slate-700 py-[8px] px-[20px] rounded-[7px] w-full inline-flex gap-[20px]"
+          >
+            <Rules class="text-blue-400" />
+            <span class="w-full"> Ir a las reglas</span>
+          </a>
+          <a
+            href="/"
+            class="bg-sky-600 py-[8px] px-[20px] rounded-[7px] w-full inline-flex gap-[20px]"
+          >
+            <Trophy class="text-yellow-400" />
+            <span class="w-full"> Ir a la clasificación </span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="w-full max-w-[1024px] p-[20px]">
+      <section class="py-[60px]" id="ubicacion">
+        <div class="flex">
+          <div class="mt-0">
+            <h2 class="text-[40px] font-bold inline-flex gap-[12px] justify-center items-center align-middle" id="reglas">
+              <Location class="text-red-600 align-middle" /> UBICACIÓN
+            </h2>
+            <p class="w-full max-w-[500px] pt-[20px]">
+              El juego es posible jugarlo en Badalona a nivel del mar, es decir
+              los barrios como <strong>Gorg</strong>, <strong>Llefià</strong>, <strong>Artigues</strong> o <strong>Centre</strong>.
+            </p> 
+          </div>
+          <img
+            class="w-full object-cover max-w-[300px]"
+            src="/badalona-mapa.webp"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="py-[60px]" id="ubicacion">
+        <div class="flex">
+          <div class="mt-0">
+            <h2 class="text-[40px] font-bold inline-flex gap-[12px] justify-center items-center align-middle" id="reglas">
+              <InfoIcon class="text-blue-600 align-middle" /> ¿En qué consiste?
+            </h2>
+            <p class="w-full max-w-[500px] pt-[20px]">
+              El juego necesita un mínimo de 3 personas. En el caso de que hayan 4 personas, habrían 2 personas que deben correr de las otras 2.
+            </p>
+            <p class="w-full max-w-[500px] pt-[20px]">
+              La idea es que todos los jugadores tengan la capacidad de comunicarse mediante <strong>walkie talkies</strong>.
+            </p>
+          </div>
+          <img
+            class="w-full object-cover max-w-[300px]"
+            src="/badalona-mapa.webp"
+            alt=""
+          />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+--- 
+import InfoIcon from "./info-icon.astro";
+---
+<section class="py-[60px]" id="ubicacion">
+  <div class="flex">
+    <div class="mt-0">
+      <h2
+        class="text-[40px] font-bold inline-flex gap-[12px] justify-center items-center align-middle"
+        id="reglas"
+      >
+        <InfoIcon class="text-blue-600 align-middle" /> ¿En qué consiste?
+      </h2>
+      <p class="w-full max-w-[500px] pt-[20px]">
+        El juego necesita un mínimo de 3 personas. En el caso de que hayan 4
+        personas, habrían 2 personas que deben correr de las otras 2.
+      </p>
+      <p class="w-full max-w-[500px] pt-[20px]">
+        La idea es que todos los jugadores tengan la capacidad de comunicarse
+        mediante <strong>walkie talkies</strong>.
+      </p>
+    </div>
+    <img
+      class="w-full object-cover max-w-[300px]"
+      src="/badalona-mapa.webp"
+      alt="Imagen de Badalona"
+    />
+  </div>
+</section>

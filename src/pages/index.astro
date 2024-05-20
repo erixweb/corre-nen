@@ -2,8 +2,8 @@
 import "../styles/index.css";
 import Trophy from "../components/trophy.astro";
 import Rules from "../components/rules.astro";
-import Location from "../components/location.astro";
-import InfoIcon from "../components/info-icon.astro";
+import InfoSection from "../components/info-section.astro";
+import LocationSection from "../components/location-section.astro";
 ---
 
 <html lang="en">
@@ -13,7 +13,7 @@ import InfoIcon from "../components/info-icon.astro";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Corre nen</title>
-    <link rel="preload" href="/font-atomic.woff2" as="font" crossorigin=""/>
+    <link rel="preload" href="/font-atomic.woff2" as="font" crossorigin="" />
     <link rel="preload" href="/portada.avif" as="image" />
   </head>
   <body class="text-[18px]">
@@ -50,44 +50,8 @@ import InfoIcon from "../components/info-icon.astro";
       </div>
     </header>
     <main class="w-full max-w-[1024px] p-[20px]">
-      <section class="py-[60px]" id="ubicacion">
-        <div class="flex">
-          <div class="mt-0">
-            <h2 class="text-[40px] font-bold inline-flex gap-[12px] justify-center items-center align-middle" id="reglas">
-              <Location class="text-red-600 align-middle" /> UBICACIÓN
-            </h2>
-            <p class="w-full max-w-[500px] pt-[20px]">
-              El juego es posible jugarlo en Badalona a nivel del mar, es decir
-              los barrios como <strong>Gorg</strong>, <strong>Llefià</strong>, <strong>Artigues</strong> o <strong>Centre</strong>.
-            </p> 
-          </div>
-          <img
-            class="w-full object-cover max-w-[300px]"
-            src="/badalona-mapa.webp"
-            alt=""
-          />
-        </div>
-      </section>
-      <section class="py-[60px]" id="ubicacion">
-        <div class="flex">
-          <div class="mt-0">
-            <h2 class="text-[40px] font-bold inline-flex gap-[12px] justify-center items-center align-middle" id="reglas">
-              <InfoIcon class="text-blue-600 align-middle" /> ¿En qué consiste?
-            </h2>
-            <p class="w-full max-w-[500px] pt-[20px]">
-              El juego necesita un mínimo de 3 personas. En el caso de que hayan 4 personas, habrían 2 personas que deben correr de las otras 2.
-            </p>
-            <p class="w-full max-w-[500px] pt-[20px]">
-              La idea es que todos los jugadores tengan la capacidad de comunicarse mediante <strong>walkie talkies</strong>.
-            </p>
-          </div>
-          <img
-            class="w-full object-cover max-w-[300px]"
-            src="/badalona-mapa.webp"
-            alt="Imagen de Badalona"
-          />
-        </div>
-      </section>
+      <LocationSection />
+      <InfoSection />
     </main>
   </body>
 </html>
